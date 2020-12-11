@@ -1,0 +1,424 @@
+@import 'utilities.css';
+@import 'variables.css';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+ul {
+    list-style-type: none;
+}
+
+i {
+    color: red;
+}
+p {
+    margin: 2rem 0;
+    line-height: 1.8;
+}
+
+img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+
+section {
+    padding: 6rem 0;
+}
+
+
+
+
+.menu-icon {
+    width: 30px;
+    margin-left: 20px;
+    display: none;
+}
+
+/* Media Query */
+@media only screen and (max-width:800px){
+    .nav-link ul {
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background: #333;
+    }
+    .nav-link ul li{
+       display: block;
+       margin-right: 50px;
+       margin-top: 10px;
+       margin-bottom: 10px;
+    }
+    .nav-link ul li a{
+       color: white;
+    }
+    .menu-icon {
+        display: block;
+        cursor: pointer;
+    }
+}
+
+
+
+
+
+
+header .navbar {
+    padding: 20px;
+}
+header .navbar i:hover{
+    color:#ffe2e2;
+    
+}
+header .navbar .logo{
+    width: 120px;
+}
+
+header .nav-link ul li{
+    padding: 10px 25px;  
+    text-transform: uppercase;
+  
+}
+header .nav-link ul li:hover{
+    border-radius: 20px;
+    background-color:var(--primary);    
+  
+}
+
+
+header {
+    background: radial-gradient(#fff, #ffd6d6);
+    width: 100%;
+    height: auto;
+}
+
+header .col h1{
+    font-size:2.5rem ;
+    margin-bottom: 2rem;
+}
+header .col p{
+    width: 500px;
+}
+
+
+ /* Featured Categories  */
+
+section.categories {
+    padding: 7rem 0;
+}
+
+section.categories .col-3 {
+    margin-right: 2rem;
+}
+section.categories .col-3 img {
+    border-radius: 1.5rem;
+    transition: .8s;
+}
+section.categories .col-3 img:hover {
+    filter: blur(2px);
+    
+}
+section.categories .col-3:last-child {
+    margin-right: 0;
+}
+
+
+/* Featured Products */
+
+
+
+
+section.products {
+   
+    background: radial-gradient(#fff, #ffd6d665);
+}
+
+section.products .grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    padding-top:1.5rem ;
+    padding-bottom:1.5rem ;
+}
+section.products .col-4 {
+    transition: .5s ease-in-out;
+}
+section.products .col-4:hover {
+    border-bottom: 2px solid var(--primary);
+    border-radius: 1rem;;
+    transform: translateY(-2rem);
+    box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.563);
+}
+section.products .col-4 h4 {
+    margin: 1rem 0 .2rem 0;
+    padding: 0 1.5rem;
+}
+section.products .col-4 > div, span {
+    margin: .2rem 0;
+    padding: 0 1.5rem;
+}
+
+
+
+
+
+
+
+/* Latest Products */
+
+section.latest-products {
+   
+    background: radial-gradient( #ffd6d65f, #fff);
+}
+
+section.latest-products .grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
+    grid-row-gap: 4rem;
+    justify-content: center;
+    align-items: center;
+    padding-top:1.5rem ;
+    padding-bottom:1.5rem ;
+}
+section.latest-products .col-4 {
+    transition: .6s ease-in-out;
+}
+
+section.latest-products .col-4:hover {
+    border-bottom: 2px solid var(--primary);
+    border-radius: 1rem;
+    transform: translateY(-2rem);
+    padding-bottom: 1rem;
+    box-shadow: 0px 8px 10px #826d6d;
+}
+section.latest-products .col-4 h4 {
+    margin: 1rem 0 .2rem 0;
+    padding: 0 1.5rem;
+}
+section.latest-products .col-4 > div, span {
+    margin: .2rem 0;
+    padding: 0 1.5rem;
+}
+
+
+
+/* Offer */
+
+section.offer {
+    background: radial-gradient(#fff, #ffd6d6f8);
+
+}
+section.offer img {
+    max-width: 80%;
+}
+
+section.offer h6 {
+    font-weight: 400;
+    font-size:1rem ;
+}
+section.offer h1 {
+    font-size:2.5rem ;
+    margin: 1rem 0;
+}
+section.offer p {
+    margin: 1rem 0;
+    margin-bottom: 3rem
+}
+
+
+/* Testiminials */
+
+section.testimonials .grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 4rem;
+    justify-content: space-evenly;
+    align-items: center;
+}
+section.testimonials img {
+    width: 80px;
+    border-radius: 50%;
+}
+section.testimonials .card {
+    padding:2rem;
+    text-align: center;
+    border-radius: .5rem;
+    box-shadow: 0px 0px 20px#ff9191;
+    transition: .3s;
+}
+section.testimonials .card:hover {
+    padding:2rem;
+    text-align: center;
+    border-radius: .5rem;
+    box-shadow: 0px 20px 30px#ff9191fd;
+    transform: translateY(-1rem);
+    transform:translateY(-2rem) skew(5deg);
+}
+section.testimonials .card p{
+    margin:.5rem;
+}
+section.testimonials .card .rating{
+    margin-bottom:2rem;
+}
+section.testimonials .card img{
+    margin-bottom:1rem;
+}
+
+
+/* Brand */
+
+section.brands {
+    padding: 1rem 0;
+    background: radial-gradient(#fff, #ffd6d6);
+}
+section.brands img {
+    max-width: 100%;
+    padding:3rem ;
+    filter: grayscale(100%);
+}
+
+
+/* Footer */
+
+footer {
+    background: black;
+    color: var(--pure);
+    padding: 2rem 0;
+}
+footer.top {
+    padding-top: 5rem;
+}
+footer img{
+    width: 120px;
+    margin-right: 1rem;
+}
+footer.top .col-2 p{
+    width: 300px;
+}
+footer.top .col-2{
+    margin-left: 4rem;
+}
+footer.top .col-3{
+    margin: auto;
+    padding:0 2rem;
+}
+footer.bottom p{
+    text-align: center;
+    margin: 0 0;
+    padding: 0;
+    font-size:.8rem;
+}
+
+
+
+
+
+/* All Products */
+
+.select {
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 6rem;
+    margin-bottom: 2rem;
+    
+
+}
+.select select{
+    padding: 15px 30px;
+    border: none;
+    outline: none;
+    
+    background: #ffd6d6;
+    font-size: 1rem ;
+    color: black;
+    cursor: pointer;
+    border-radius: .5rem;
+    
+}
+
+
+.pagination {
+   margin-top: 3rem;
+   padding: 4rem;
+   text-align: center;
+}
+
+.pagination span {
+   border: 1px solid var(--primary);
+   padding: 10px 10px;
+   margin-right: 1rem;
+   transition: .3s;
+}
+.pagination span:hover {
+   background: var(--primary);
+}
+
+
+
+/* Singale Product Details  */
+
+section.product-single .right {
+    transform: translateY(-50%px);
+    margin-left: 3rem;
+}
+section.product-single .right h1{
+    margin-bottom: 2rem;
+}
+section.product-single .right h4{
+    margin-bottom: 1rem;
+}
+section.product-single .right select{
+    display: block;
+    font-size: 16px;
+    padding:7px 60px;
+    outline: none;
+    border: 1px solid var(--primary);
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    margin-right: 2rem;
+}
+section.product-single .right input{
+    font-size: 20px;
+    padding:7px;
+    outline: none;
+    border:1px solid var(--primary);
+    width: 80px;
+    border-radius: 5px;
+    margin-bottom: 3rem;
+    margin-right: 2rem;
+}
+
+section.product-single .right p{
+   margin:1rem 0;
+   max-width: 500px;
+}
+
+section.product-single .left .img-sm .flex-1{
+   margin: 2rem 1rem 2rem 0;
+   cursor: pointer;
+   transition: .3s;
+}
+section.product-single .left .img-sm .flex-1:hover{
+    filter: brightness(50%);
+
+}
+
+
